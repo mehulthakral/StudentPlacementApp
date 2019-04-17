@@ -44,7 +44,7 @@ public class Admin extends AppCompatActivity {
         int imagevalue=R.drawable.ic_launcher_background;
         db=openOrCreateDatabase("Placements",Context.MODE_PRIVATE,null);
         db.execSQL("CREATE TABLE IF NOT EXISTS Events1(ID INTEGER PRIMARY KEY AUTOINCREMENT,information varchar,ident int,date varchar,email varchar,phone varchar);");
-        Log.d(tag,"HERE DATABASE TABLE");
+        //Log.d(tag,"HERE DATABASE TABLE");
         db.execSQL("DELETE FROM Events1");
         db.execSQL("INSERT INTO Events1(information,ident,date,email,phone)VALUES('THESE ARE REPLICATES OF EVENTS THAT WE ARE SUPPOSED TO BE MIMICING BUT WE ARE STILL TRYING OUT SOME BASIC STUFF',"+imagevalue+",'22/04/1999','hemanthvenki910@gmail.com','9449398414');");
         db.execSQL("INSERT INTO Events1(information,ident,date,email,phone)VALUES('THESE ARE REPLICATES OF EVENTS',"+imagevalue+",'22/04/1999','hemanthvenki910@gmail.com','9449398414');");
@@ -60,14 +60,14 @@ public class Admin extends AppCompatActivity {
         String[] Email1= new String[maxvalue];
         String[] Phone1= new String[maxvalue];
 
-        Log.d(tag,"HERE DATABASE TABLE");
+        //Log.d(tag,"HERE DATABASE TABLE");
 
         generateData(Web1,Id1,Date1,Email1,Phone1,maxvalue);
 
         final String[] WebF=Web1.clone();
         final String[] DateF=Date1.clone();
         final String[] EmailF=Email1.clone();
-        final String[] PhoneF=Web1.clone();
+        final String[] PhoneF=Phone1.clone();
         final Integer[] IdF=Id1.clone();
 
 
@@ -83,6 +83,7 @@ public class Admin extends AppCompatActivity {
                 intent.putExtra(EXTRA_MAIL,EmailF[position]);
                 intent.putExtra(EXTRA_DATE,DateF[position]);
                 intent.putExtra(EXTRA_PHONENUMBER,PhoneF[position]);
+                //Log.d("PHONENUMBER",PhoneF[position]);
                 startActivity(intent);
             }
         });
@@ -132,16 +133,16 @@ public class Admin extends AppCompatActivity {
             Date[i]=cr.getString(3);
             Email[i]=cr.getString(4);
             Phone[i]=cr.getString(5);
-            Log.d(tag,cr.getString(0)+"HEHE");
+           // Log.d(tag,cr.getString(5));
             i++;
         }
-        Log.d(tag,"HERE");
+        //Log.d(tag,"HERE");
     }
     public int getListValue()
     {
         SQLiteDatabase db=openOrCreateDatabase("Placements", Context.MODE_PRIVATE,null);
         Cursor cr=db.rawQuery("SELECT * FROM Events1",null);
-        Log.d("EROOROOR","HEY IM HERE");
+        //Log.d("EROOROOR","HEY IM HERE");
         return(cr.getCount());
     }
     @Override

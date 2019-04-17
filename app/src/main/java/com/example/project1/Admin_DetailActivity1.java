@@ -2,10 +2,12 @@ package com.example.project1;
 
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -42,16 +44,17 @@ public class Admin_DetailActivity1 extends AppCompatActivity {
         message = (TextView) findViewById(R.id.lbl_date_and_time_header);
         message.setText(DateofEvent);
 
-        String PhoneNumberofEvent= i.getStringExtra(EXTRA_PHONENUMBER);
-        String MailofEvent = i.getStringExtra(EXTRA_MAIL);
-
-
         FloatingActionButton fab = findViewById(R.id.detailed_activity_fabulous_gmail);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Here's a Snackbar", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Intent i=getIntent();
+                String MailofEvent = i.getStringExtra(EXTRA_MAIL);
+                Log.d("ERROR",MailofEvent);
+                Intent mailto=new Intent(Intent.ACTION_SEND);
+                mailto.setData(Uri.parse("mailto:"+MailofEvent));
+                mailto.setType("text/plain");
+                startActivity(mailto);
             }
         });
 
@@ -60,8 +63,12 @@ public class Admin_DetailActivity1 extends AppCompatActivity {
         fab1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Snackbar.make(v, "Here's a Snackbar", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Intent i=getIntent();
+                String PhoneNumberofEvent= i.getStringExtra(EXTRA_PHONENUMBER);
+                Log.d("ERROR",PhoneNumberofEvent);
+                Intent callto=new Intent(Intent.ACTION_DIAL);
+                callto.setData(Uri.parse("tel:"+PhoneNumberofEvent));
+                startActivity(callto);
             }
         });
 
