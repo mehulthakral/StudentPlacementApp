@@ -46,12 +46,12 @@ public class Admin extends AppCompatActivity {
         db=openOrCreateDatabase("Placements",Context.MODE_PRIVATE,null);
         db.execSQL("CREATE TABLE IF NOT EXISTS Events1(ID INTEGER PRIMARY KEY AUTOINCREMENT,information varchar,ident int,date varchar,email varchar,phone varchar);");
         //Log.d(tag,"HERE DATABASE TABLE");
-        db.execSQL("DELETE FROM Events1");
-        db.execSQL("INSERT INTO Events1(information,ident,date,email,phone)VALUES('THESE ARE REPLICATES OF EVENTS THAT WE ARE SUPPOSED TO BE MIMICING BUT WE ARE STILL TRYING OUT SOME BASIC STUFF',"+imagevalue+",'22/04/1999','hemanthvenki910@gmail.com','9449398414');");
-        db.execSQL("INSERT INTO Events1(information,ident,date,email,phone)VALUES('THESE ARE REPLICATES OF EVENTS',"+imagevalue+",'22/04/1999','hemanthvenki910@gmail.com','9449398414');");
-        db.execSQL("INSERT INTO Events1(information,ident,date,email,phone)VALUES('THESE ARE REPLICATES OF EVENTS',"+imagevalue+",'22/04/1999','hemanthvenki910@gmail.com','9449398414');");
-        db.execSQL("INSERT INTO Events1(information,ident,date,email,phone)VALUES('THESE ARE REPLICATES OF EVENTS',"+imagevalue+",'22/04/1999','hemanthvenki910@gmail.com','9449398414');");
-        db.execSQL("INSERT INTO Events1(information,ident,date,email,phone)VALUES('THESE ARE REPLICATES OF EVENTS',"+imagevalue+",'22/04/1999','hemanthvenki910@gmail.com','9449398414');");
+        //db.execSQL("DELETE FROM Events1");
+        //db.execSQL("INSERT INTO Events1(information,ident,date,email,phone)VALUES('THESE ARE REPLICATES OF EVENTS THAT WE ARE SUPPOSED TO BE MIMICING BUT WE ARE STILL TRYING OUT SOME BASIC STUFF',"+imagevalue+",'22/04/1999','hemanthvenki910@gmail.com','9449398414');");
+        //db.execSQL("INSERT INTO Events1(information,ident,date,email,phone)VALUES('THESE ARE REPLICATES OF EVENTS',"+imagevalue+",'22/04/1999','hemanthvenki910@gmail.com','9449398414');");
+        //db.execSQL("INSERT INTO Events1(information,ident,date,email,phone)VALUES('THESE ARE REPLICATES OF EVENTS',"+imagevalue+",'22/04/1999','hemanthvenki910@gmail.com','9449398414');");
+        //db.execSQL("INSERT INTO Events1(information,ident,date,email,phone)VALUES('THESE ARE REPLICATES OF EVENTS',"+imagevalue+",'22/04/1999','hemanthvenki910@gmail.com','9449398414');");
+        //db.execSQL("INSERT INTO Events1(information,ident,date,email,phone)VALUES('THESE ARE REPLICATES OF EVENTS',"+imagevalue+",'22/04/1999','hemanthvenki910@gmail.com','9449398414');");
 
         int maxvalue;
         maxvalue=getListValue();
