@@ -23,8 +23,18 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/list">
-
         </ListView>
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="29dp"
+            android:id="@+id/admin_addevent_fabulous"
+            android:src="@drawable/ic_add_black_24dp" />
     </RelativeLayout>
 
     <android.support.design.widget.NavigationView

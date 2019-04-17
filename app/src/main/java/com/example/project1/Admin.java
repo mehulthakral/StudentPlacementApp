@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.annotation.NonNull;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -113,6 +114,16 @@ public class Admin extends AppCompatActivity {
                     default:
                         return true;
                 }
+            }
+        });
+
+
+        FloatingActionButton fltbutton=(FloatingActionButton)findViewById(R.id.admin_addevent_fabulous);
+        fltbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(Admin.this,Admin_Event.class);
+                startActivity(i);
             }
         });
     }
