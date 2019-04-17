@@ -37,6 +37,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <receiver android:name="com.example.project1.AlarmReceiver"></receiver>
     </application>
 
 </manifest>

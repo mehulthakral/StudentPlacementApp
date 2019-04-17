@@ -42,7 +42,7 @@ public class Admin extends AppCompatActivity {
         list=(ListView)findViewById(R.id.list);
 
 
-        int imagevalue=R.drawable.ic_launcher_background;
+        int imagevalue=R.drawable.blue_image_intern;
         db=openOrCreateDatabase("Placements",Context.MODE_PRIVATE,null);
         db.execSQL("CREATE TABLE IF NOT EXISTS Events1(ID INTEGER PRIMARY KEY AUTOINCREMENT,information varchar,ident int,date varchar,email varchar,phone varchar);");
         //Log.d(tag,"HERE DATABASE TABLE");
