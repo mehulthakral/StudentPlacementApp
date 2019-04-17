@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">Project1</string>
     <string name="title_activity_student_login">StudentLogin</string>
+    <string name="Open">Nav_bar</string>
+    <string name="Close">Nav_bar</string>
 </resources>

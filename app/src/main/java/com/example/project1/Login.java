@@ -38,6 +38,15 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 db.execSQL("CREATE TABLE IF NOT EXISTS Students(SRN Varchar,Password Varchar,Age Varchar,CGPA Varchar,Semester Varchar);");
+                Intent StudentPage=new Intent(getApplicationContext(),StudentLogin.class);
+                startActivity(StudentPage);
+            }
+        });
+
+        Register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                db.execSQL("CREATE TABLE IF NOT EXISTS Students(SRN Varchar,Password Varchar,Age Varchar,CGPA Varchar,Semester Varchar);");
                 Intent StudentPage=new Intent(getApplicationContext(),StudentActivity.class);
                 startActivity(StudentPage);
             }

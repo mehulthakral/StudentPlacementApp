@@ -10,9 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Admin"></activity>
+        <activity android:name=".StudentLogin"></activity>
+        <activity android:name=".StudentSignedIn" />
+        <activity android:name=".Admin_DetailActivity1" android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
-            android:name=".StudentActivity"
-            android:label="STUDENT LOGIN" />
+        android:name=".StudentActivity"
+        android:label="STUDENT LOGIN" />
         <activity
             android:name=".AdminLogin"
             android:label="ADMIN PAGE"
@@ -31,6 +34,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>
