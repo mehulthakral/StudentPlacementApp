@@ -14,7 +14,6 @@ class AlarmReceiver extends BroadcastReceiver {
         Uri notification= RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM);
         Ringtone r=RingtoneManager.getRingtone(context.getApplicationContext(),notification);
         r.play();
-        ///sldknflksdnklfnsklnflknsdlkfndsnflkslknfdsknlf
         Toast.makeText(context,"Alarm Received",Toast.LENGTH_LONG).show();
     }
 }
