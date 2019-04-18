@@ -61,7 +61,7 @@ public class Admin extends AppCompatActivity {
         String[] Email1= new String[maxvalue];
         String[] Phone1= new String[maxvalue];
 
-        //Log.d(tag,"HERE DATABASE TABLE");
+        Log.d(tag,"HERE DATABASE TABLE");
 
         generateData(Web1,Id1,Date1,Email1,Phone1,maxvalue);
 

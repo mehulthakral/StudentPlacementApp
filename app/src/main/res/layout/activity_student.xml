@@ -4,133 +4,180 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/register"
+    android:background="@color/WhiteSmoke"
     tools:context=".StudentActivity">
 
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/textview_custom"
+        android:layout_height="42dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="30dp"
-        android:text="Enter Details"
-        app:layout_constraintStart_toStartOf="@+id/studentSRN"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Enter Details!!!"
+        android:textColor="@color/CustomPink"
+        android:textSize="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/studentSRN"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.198"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/studentSRN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="85dp"
-        android:layout_marginEnd="41dp"
+        style="@style/edittext_custom_1"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="68dp"
         android:ems="10"
+        android:hint="Enter SRN"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/studentAge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/edittext_custom_1"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         android:ems="10"
+        android:hint="Enter Age"
         android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="@+id/studentPassword"
-        app:layout_constraintTop_toBottomOf="@+id/studentPassword" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/studentCGPA"
+        app:layout_constraintVertical_bias="0.116" />
 
     <EditText
         android:id="@+id/studentCGPA"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="14dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="@+id/studentAge"
-        app:layout_constraintTop_toBottomOf="@+id/studentAge" />
-
-    <EditText
-        android:id="@+id/studentSem"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/edittext_custom_1"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:ems="10"
+        android:hint="ENTER CGPA"
         android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="@+id/studentCGPA"
-        app:layout_constraintTop_toBottomOf="@+id/studentCGPA" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="97dp"
-        android:layout_marginBottom="99dp"
-        android:text="SRN"
-        app:layout_constraintBottom_toTopOf="@+id/textView6"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="38dp"
-        android:text="Password"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="22dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginBottom="74dp"
-        android:text="Age"
-        app:layout_constraintBottom_toBottomOf="@+id/studentCGPA"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="39dp"
-        android:text="CGPA"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="23dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginBottom="44dp"
-        android:text="Semester"
-        app:layout_constraintBottom_toTopOf="@+id/studentRegister"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-    <Button
-        android:id="@+id/studentRegister"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="34dp"
-        android:text="Register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/studentSem" />
 
     <EditText
-        android:id="@+id/studentPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:id="@+id/studentSem"
+        style="@style/edittext_custom_1"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="35dp"
         android:ems="10"
+        android:hint="Enter SEM"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.921"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/studentPassword" />
+
+    <TextView
+        android:id="@+id/textView2"
+        style="@style/textview_custom"
+        android:layout_marginTop="104dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="SRN"
+        app:layout_constraintBottom_toBottomOf="@+id/studentSRN"
+        app:layout_constraintEnd_toStartOf="@+id/studentSRN"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView5"
+        style="@style/textview_custom"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Password"
+        app:layout_constraintBottom_toBottomOf="@+id/studentPassword"
+        app:layout_constraintEnd_toStartOf="@+id/studentPassword"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView6"
+        style="@style/textview_custom"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Age"
+        app:layout_constraintBottom_toBottomOf="@+id/studentAge"
+        app:layout_constraintEnd_toStartOf="@+id/studentAge"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView7"
+        style="@style/textview_custom"
+        android:layout_width="64dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="CGPA"
+        app:layout_constraintBottom_toBottomOf="@+id/studentCGPA"
+        app:layout_constraintEnd_toStartOf="@+id/studentCGPA"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView8"
+        style="@style/textview_custom"
+        android:layout_height="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Semester"
+        app:layout_constraintBottom_toBottomOf="@+id/studentSem"
+        app:layout_constraintEnd_toStartOf="@+id/studentSem"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/studentRegister"
+        style="@style/Admin_button_style"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="36dp"
+        android:text="Register"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.453"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/studentPassword"
+        style="@style/edittext_custom_1"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="PASSWORD"
         android:inputType="textPassword"
-        app:layout_constraintStart_toStartOf="@+id/studentSRN"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/studentSRN" />
 </android.support.constraint.ConstraintLayout>

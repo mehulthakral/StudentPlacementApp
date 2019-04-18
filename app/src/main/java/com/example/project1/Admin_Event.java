@@ -3,6 +3,7 @@ package com.example.project1;
 import android.content.Context;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -46,24 +47,29 @@ public class Admin_Event extends AppCompatActivity implements AdapterView.OnItem
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 db=openOrCreateDatabase("Placements", Context.MODE_PRIVATE,null);
                 db.execSQL("CREATE TABLE IF NOT EXISTS Events1(ID INTEGER PRIMARY KEY AUTOINCREMENT,information varchar,ident int,date varchar,email varchar,phone varchar);");
                 if(type.equals("Placement"))
-                    imagevalue = R.drawable.placement_final;
+                {imagevalue=R.drawable.placement_final;}
                 else if(type.equals("Internship"))
-                    imagevalue = R.drawable.internship_final;
+                   imagevalue=R.drawable.intership_final;
                 else if(type.equals("Workshop"))
                     imagevalue = R.drawable.workshop_final;
                 else if(type.equals("Talk"))
                     imagevalue = R.drawable.talk_final;
                 else
-                    imagevalue = R.drawable.placement_final;
+                {
+                    imagevalue=R.drawable.placement_final;
+                }
+                if(info.getText().toString().equals("") || date.getText().toString().equals("") || email.getText().toString().equals("") || phone.getText().toString().equals("")){
+                    Snackbar.make(v,"Please Fill in all the Details",Snackbar.LENGTH_LONG).show();
+                }
+                else{
 
                 db.execSQL("INSERT INTO Events1(information,ident,date,email,phone)VALUES('"+ info.getText() +"',"+imagevalue+",'"+ date.getText() +"','"+ email.getText() +"','"+ phone.getText() +"');");
                 Toast.makeText(Admin_Event.this, "Event successfully added!", Toast.LENGTH_LONG).show();
                 Intent i = new Intent(getApplicationContext(),Admin.class);
-                startActivity(i);
+                startActivity(i);}
             }
         });
 

@@ -8,118 +8,122 @@
 
     <TextView
         android:id="@+id/textView13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="14dp"
-        android:text="Details of the Event"
+        style="@style/textview_custom"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="Details of the Event!!!!!"
+        android:textColor="@color/CustomPink"
         app:layout_constraintBottom_toTopOf="@+id/eventInfo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.422"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.16" />
 
     <TextView
         android:id="@+id/textView14"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="76dp"
+        style="@style/textview_custom"
+        android:layout_marginTop="92dp"
         android:text="Information"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/eventInfo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        style="@style/edittext_custom_1"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
         app:layout_constraintStart_toEndOf="@+id/textView14" />
 
     <Spinner
         android:id="@+id/eventType"
-        android:layout_width="208dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/eventDate"
+        android:layout_width="219dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="16dp"
+        android:textSize="32dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.838"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView15"></Spinner>
+        app:layout_constraintTop_toBottomOf="@+id/eventInfo"></Spinner>
 
     <TextView
         android:id="@+id/textView15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="19dp"
+        style="@style/textview_custom"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="40dp"
         android:text="Type"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
     <TextView
         android:id="@+id/textView16"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="25dp"
+        style="@style/textview_custom"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="8dp"
         android:text="Date"
+        app:layout_constraintEnd_toStartOf="@+id/eventDate"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+        app:layout_constraintTop_toBottomOf="@+id/eventType" />
 
     <EditText
         android:id="@+id/eventDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="37dp"
-        android:ems="10"
+        style="@style/edittext_custom_1"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="8dp"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/eventType"
-        app:layout_constraintTop_toBottomOf="@+id/eventInfo" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eventType" />
 
     <TextView
         android:id="@+id/textView17"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="28dp"
+        style="@style/textview_custom"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="40dp"
         android:text="Email"
         app:layout_constraintBottom_toTopOf="@+id/textView18"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/eventEmail" />
 
     <EditText
         android:id="@+id/eventEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:ems="10"
+        style="@style/edittext_custom_1"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
         android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/eventDate"
         app:layout_constraintTop_toBottomOf="@+id/eventDate" />
 
     <TextView
         android:id="@+id/textView18"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        style="@style/textview_custom"
+        android:layout_marginStart="36dp"
         android:text="Phone"
         app:layout_constraintBaseline_toBaselineOf="@+id/eventPhone"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/eventPhone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:ems="10"
+        style="@style/edittext_custom_1"
+        android:layout_marginTop="28dp"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="@+id/eventEmail"
         app:layout_constraintTop_toBottomOf="@+id/eventEmail" />
 
     <Button
         android:id="@+id/eventAdd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="42dp"
-        android:layout_marginEnd="85dp"
+        style="@style/Admin_button_style"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="132dp"
         android:text="Add"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/eventPhone" />

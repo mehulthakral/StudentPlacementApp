@@ -32,8 +32,19 @@ public class singlelistadap extends ArrayAdapter<String> {
         LayoutInflater inflater;
         inflater=context.getLayoutInflater();
         View Rowelement=inflater.inflate(R.layout.admin_single_element,parent,false);
+
+
         text=( TextView )Rowelement.findViewById(R.id.single_element_text);
-        text.setText(Web[position]);
+        String WebFinal="";
+
+        String[] arrgs= Web[position].split("br ",0);
+        String messageFinal ="";
+        for(String a: arrgs)
+        {
+            messageFinal+="\n"+a;
+        }
+        text.setText(messageFinal);
+
         image=( ImageView )Rowelement.findViewById(R.id.single_element_image);
         image.setImageResource(Id[position]);
         date=( TextView )Rowelement.findViewById(R.id.single_element_date);

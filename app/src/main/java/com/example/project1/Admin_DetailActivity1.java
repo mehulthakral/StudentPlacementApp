@@ -39,13 +39,20 @@ public class Admin_DetailActivity1 extends AppCompatActivity {
         setContentView(R.layout.activity_detail1);
         Intent i=getIntent();
 
-         final AlarmManager alarmMgr;
-         PendingIntent alarmIntent;
+        final AlarmManager alarmMgr;
+        PendingIntent alarmIntent;
 
 
         String messageExtra = i.getStringExtra(EXTRA_CONTENT);
         message = (TextView) findViewById(R.id.lbl_message_body);
-        message.setText(messageExtra);
+        String[] arrgs= messageExtra.split("br ",0);
+        String messageFinal ="";
+        for(String a: arrgs)
+        {
+           messageFinal+="\n"+a;
+        }
+        message.setText(messageFinal);
+
 
         int drawableResourceExtra = i.getIntExtra(EXTRA_IMAGE, 0);
 
@@ -62,13 +69,18 @@ public class Admin_DetailActivity1 extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                try{
                 Intent i=getIntent();
                 String MailofEvent = i.getStringExtra(EXTRA_MAIL);
                 Log.d("ERROR",MailofEvent);
                 Intent mailto=new Intent(Intent.ACTION_SEND);
                 mailto.setData(Uri.parse("mailto:"+MailofEvent));
                 mailto.setType("text/plain");
-                startActivity(mailto);
+                startActivity(mailto);}
+                catch(Exception e)
+                {
+                    Snackbar.make(view,"INVALID ITEM",Snackbar.LENGTH_LONG).show();
+                }
             }
         });
 
@@ -77,12 +89,17 @@ public class Admin_DetailActivity1 extends AppCompatActivity {
         fab1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                try{
                 Intent i=getIntent();
                 String PhoneNumberofEvent= i.getStringExtra(EXTRA_PHONENUMBER);
                 Log.d("ERROR",PhoneNumberofEvent);
                 Intent callto=new Intent(Intent.ACTION_DIAL);
                 callto.setData(Uri.parse("tel:"+PhoneNumberofEvent));
-                startActivity(callto);
+                startActivity(callto);}
+                catch(Exception e)
+                {
+                    Snackbar.make(v,"INVALID ITEM",Snackbar.LENGTH_LONG).show();
+                }
             }
         });
 

@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -47,7 +48,23 @@ public class AdminLogin extends AppCompatActivity{
         }
         else
         {
-            Toast.makeText(getApplicationContext(),cr.getString(0)+Name+cr.getString(1)+Password,Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(),"Invalid Credentials",Toast.LENGTH_LONG).show();
+        }
+    }
+
+
+    @Override
+    protected void onPause()
+    {
+        AdminName=(EditText)findViewById(R.id.login_Admin_Name);
+        AdminPassword=(EditText)findViewById(R.id.login_Admin_password);
+        try{
+        super.onPause();
+        AdminName.setText("");
+        AdminPassword.setText("");}
+        catch(Exception e)
+        {
+            Log.d("ERROR WHILE PAUSE",e.toString());
         }
     }
 }

@@ -20,15 +20,40 @@
         <item name="windowNoTitle">true</item>
     </style>
     <style name="edittext_custom">
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:textColor">@color/CustomPink</item>
+        <item name="android:textStyle">italic</item>
         <item name="android:textSize">30dp</item>
         <item name="android:layout_width">320dp</item>
         <item name="android:layout_height">70dp</item>
-        <item name="android:background">@null</item>
+        <item name="android:background">@drawable/edittext</item>
+    </style>
+    <style name="edittext_custom_1">
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:textColor">@color/CustomPink</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:textSize">30dp</item>
+        <item name="android:layout_width">225dp</item>
+        <item name="android:layout_height">55dp</item>
+        <item name="android:background">@drawable/edittext</item>
     </style>
     <style name="textview_custom">
-        <item name="android:textSize">20dp</item>
+        <item name="android:textSize">25dp</item>
+        <item name="android:textStyle">italic</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="Admin_button_style">
+        <item name="android:textStyle">italic</item>
+        <item name="android:background">@drawable/rounded_button</item>
+        <item name="android:textSize">24dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
     </style>
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 

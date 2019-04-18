@@ -89,8 +89,7 @@ public class StudentSignedIn extends AppCompatActivity {
         signout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i =new Intent(StudentSignedIn.this,StudentLogin.class);
-                startActivity(i);
+                onBackPressed();
             }
         });
     }
@@ -99,7 +98,7 @@ public class StudentSignedIn extends AppCompatActivity {
     {
         String tag="ERROR";
         SQLiteDatabase db=openOrCreateDatabase("Placements",Context.MODE_PRIVATE,null);
-
+        db.execSQL("CREATE TABLE IF NOT EXISTS Events1(ID INTEGER PRIMARY KEY AUTOINCREMENT,information varchar,ident int,date varchar,email varchar,phone varchar);");
         Cursor cr=db.rawQuery("SELECT * FROM Events1 ORDER BY ID DESC",null);
         int i=0;
         while(cr.moveToNext() && i<maxvalue)
